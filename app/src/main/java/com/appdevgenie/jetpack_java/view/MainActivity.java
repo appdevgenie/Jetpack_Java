@@ -1,8 +1,10 @@
-package com.appdevgenie.jetpack_java;
+package com.appdevgenie.jetpack_java.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.appdevgenie.jetpack_java.R;
 
 public class MainActivity extends AppCompatActivity {
 
