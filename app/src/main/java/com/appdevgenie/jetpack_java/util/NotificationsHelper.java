@@ -22,7 +22,7 @@ public class NotificationsHelper {
     private static final String CHANNEL_ID = "Dogs channel id";
     private static final int NOTIFICATION_ID = 123;
 
-    private static NotificationsHelper instace;
+    private static NotificationsHelper instance;
     private Context context;
 
     private NotificationsHelper(Context context) {
@@ -30,10 +30,10 @@ public class NotificationsHelper {
     }
 
     public static NotificationsHelper getInstance(Context context) {
-        if(instace == null) {
-            instace = new NotificationsHelper(context);
+        if(instance == null) {
+            instance = new NotificationsHelper(context);
         }
-        return instace;
+        return instance;
     }
 
     public void createNotification() {

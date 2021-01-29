@@ -73,7 +73,7 @@ public class DetailFragment extends Fragment {
                 currentDog = dogBreed;
                 binding.setDog(dogBreed);
                 if(dogBreed.imageUrl != null) {
-                   // setupBackgroundColor(dogBreed.imageUrl);
+                    setupBackgroundColor(dogBreed.imageUrl);
                 }
             }
         });
@@ -88,9 +88,11 @@ public class DetailFragment extends Fragment {
                     public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                         Palette.from(resource)
                                 .generate(palette -> {
-                                    int intColor = palette.getLightMutedSwatch().getRgb();
-                                    DogPalette myPalette = new DogPalette(intColor);
-                                    binding.setPalette(myPalette);
+                                    if(palette != null) {
+                                        int intColor = palette.getLightMutedSwatch().getRgb();
+                                        DogPalette myPalette = new DogPalette(intColor);
+                                        binding.setPalette(myPalette);
+                                    }
                                 });
                     }
 

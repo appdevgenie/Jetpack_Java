@@ -20,9 +20,7 @@ import com.appdevgenie.jetpack_java.R;
 public class MainActivity extends AppCompatActivity {
 
     private static final int PERMISSION_SEND_SMS = 342;
-
     private NavController navController;
-
     private Fragment fragment;
 
     @Override
